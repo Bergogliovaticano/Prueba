@@ -1,0 +1,225 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {  
+    display: grid;
+    width: 90%;
+    margin: 10px auto;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header Header Header Header Header Header"
+      "Section1 Section1 Section1 Section1 Section2 Section2 Section2"
+      "Section3 Section3 Section4 Section4 Section2 Section2 Section2"
+      "Section3 Section3 Section4 Section4 Section2 Section2 Section2"
+      "Footer Footer Footer Footer Footer Footer Footer";
+  }
+  
+  .Header { 
+    background-color: #333333;
+    grid-area: Header; }
+  
+  .Section1 { 
+    
+    color: #B63F16;
+    grid-area: Section1; 
+}
+.Section1 h1
+{
+    color: rgb(243, 227, 184);
+    margin: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Arial, Helvetica, sans-serif;
+    animation: texto 8s infinite;
+    animation-name: texto;
+}
+
+@keyframes texto{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+  
+  .Section2 
+{ 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    grid-area: Section2; 
+}
+
+.Section2 img
+{
+    justify-items:center;
+    width: 350px;
+    height: 350px;
+    border-radius: 10%;
+    border: solid black 3px;
+    animation: animacion 6s infinite;
+    animation-name: imganime;
+}
+
+@keyframes imganime
+{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100%{
+        opacity: 0;
+    }
+
+
+}
+
+
+  
+  .Footer 
+{ 
+    grid-area: Footer; 
+}
+
+.Section3 
+{ 
+    
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    grid-area: Section3; 
+    align-items:center;
+    margin: 10px;
+}
+
+.Section3 img
+{
+    border-radius: 20%;
+    justify-items:center;
+    width: 350px;
+    height: 350px;
+
+}
+
+
+  
+  .Section4 
+{       
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: Section4; 
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.Section4 img
+{
+    border-radius: 20%;
+    justify-items:center;
+    width: 350px;
+    height: 350px;
+    transition: all 2s ease;
+
+}
+
+.Section4 img:hover
+{
+    transform: scale(1.5);
+    
+}
+  
+
+  
+
+body {
+    background: #e9d362;  /* fallback for old browsers */
+    background-image: linear-gradient(to right, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #B63F16;
+}
+
+h1{
+    text-align: center;
+    color: rgb(243, 227, 184);
+    font-size: 50px;
+    font-style:normal;
+    font-weight:bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.2;
+}
+
+nav{
+    width: 90%;
+    height: 100px;
+    margin:0 auto;
+    background-color: rgb(243, 227, 184);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+
+nav ul{
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul a{
+    color: #B63F16;
+    text-decoration: none;
+    padding: .7rem;
+    font-size: 2rem;
+    justify-content: space-between;
+    justify-items:auto;
+}
+
+nav ul a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(43, 42, 39);
+    border-radius: 20px;
+}
+
+img{
+    
+    padding: 2px;
+    margin: auto;
+    top: 10px;
+    left: auto;
+
+}
+
+h2{
+    text-align: center;
+    color: aliceblue;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
+    line-height: 1.2;
+}
+
